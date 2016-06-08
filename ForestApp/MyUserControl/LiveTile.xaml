@@ -1,0 +1,29 @@
+﻿<UserControl
+    x:Class="MyUserControl.LiveTile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyUserControl"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="280"
+    d:DesignWidth="480">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Source="{Binding Img1Path}" Stretch="Fill" x:Name="Img1" Width="480" Height="280">
+            <Image.RenderTransform >
+                <TranslateTransform x:Name="img1Board" X="0" Y="0"/>
+            </Image.RenderTransform>
+        </Image>
+
+        <Image Grid.Column="1" Source="{Binding Img2Path}" Stretch="Fill" x:Name="Img2"  Width="480" Height="280">
+            <Image.RenderTransform>
+                <TranslateTransform x:Name="img2Board" X="480" Y="0"/>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</UserControl>
